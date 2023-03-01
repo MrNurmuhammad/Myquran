@@ -8,7 +8,7 @@ export  const AudioPlayer = () => {
   const { audioData, setAudioData } = useContext(audioContext);
 
   useEffect(() => {
-    
+
   }, [])
     
   return (
@@ -16,7 +16,6 @@ export  const AudioPlayer = () => {
         <audio style={{width: "100%"}}
           src={audioData[audioId]?.audio}
           controls
-          autoPlay
           onEnded={() => setAudioId(audioId + 1)}
         >
         </audio>
