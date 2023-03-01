@@ -15,7 +15,6 @@ const ReadQuran = () => {
   const [loading, setLoading] = useState(false);
   const { audioId, setAudioId } = useContext(audioContext);
   const { audioData, setAudioData } = useContext(audioContext);
-  const [surahEnglish, setSurahEnglish] = useState()
   const [surah, setSurah] = useState();
   const [audio, setAudio] = useState()
   const [isplaying, setIsplaying] = useState(false);
@@ -78,18 +77,7 @@ const ReadQuran = () => {
               <p>{s.revelationType}</p>
 
               <Button className={s.player} onClick={() => Audio(s?.number)}  icon="pi pi-play" rounded severity="secondary" aria-label="Bookmark" />
-              {/* <audio src={audioData?.data?.ayahs[i]?.audio} ended  controls ></audio> */}
-              {/* {console.log(audio?.data?.ayahs[i]?.audio, "audiofile")} */}
-              {/* <ReactAudioPlayer
-              className={sass.audioplayer}
-                src={audioData?.data?.ayahs[i]?.audio}
-               
-                onPlay
-                controls
-                Ended
-                controller
-
-              /> */}
+              
             </div>
           ))}
         </div>

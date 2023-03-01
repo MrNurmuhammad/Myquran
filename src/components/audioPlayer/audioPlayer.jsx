@@ -1,4 +1,5 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import ReactAudioPlayer from 'react-audio-player'
 import { audioContext } from '../../context/context'
 import Navbar from '../navbar/navbar'
 
@@ -7,18 +8,28 @@ export  const AudioPlayer = () => {
   const {audioId, setAudioId} = useContext(audioContext)
   const { audioData, setAudioData } = useContext(audioContext);
 
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying);
+  };
+  
   useEffect(() => {
 
   }, [])
     
   return (
       <div>
-        <audio style={{width: "100%"}}
-          src={audioData[audioId]?.audio}
-          controls
-          onEnded={() => setAudioId(audioId + 1)}
-        >
-        </audio>
+        
+        <ReactAudioPlayer
+        src={audioData[audioId]?.audio}
+        autoPlay={false}
+        controls
+        onPlay={togglePlay}
+        onPause={togglePlay}
+        onEnded={() => setIsPlaying(false)}
+      />
+      <h2>{isPlaying ? "Playing" : "Paused"}</h2>
     </div>
   )
 }

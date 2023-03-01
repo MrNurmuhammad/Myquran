@@ -21,23 +21,7 @@ const PrayerTime = () => {
 
     timeData.get(`day?region=${region}`).then((res) =>setTime(res?.data))
 
-    // if(time >= time.times?.tong_saharlik){
-    //   setIsActive(true)
-    // }else if(time >= time.times.quyosh){
-    //   setIsActive(true)
-    // }
-    // else if(time >= time.times.peshin){
-    //   setIsActive(true)
-    // }
-    // else if(time >= time.times.asr){
-    //   setIsActive(true)
-    // }
-    // else if(time >= time.times.shom_iftor){
-    //   setIsActive(true)
-    // }
-    // else {
-    //   setIsActive(true)
-    // }
+    
   },[region])
   console.log(region, "region");
   return (
