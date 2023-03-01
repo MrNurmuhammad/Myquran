@@ -1,0 +1,28 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 10px 0;
+    background-color: rgba(247, 244, 241, 0.644);
+    color: blue;
+    box-shadow: 17px 17px 25px rgba(70, 70, 70, 0.12);
+
+    .select{
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid blue;
+        outline: blueviolet;
+        background-color: transparent;
+        color: blue;
+        cursor: pointer;
+    }
+    h1{
+        cursor: pointer;
+        font-size: 1.2rem;
+
+        &:hover{
+            rotate: 180;
+        }
+    }
+}

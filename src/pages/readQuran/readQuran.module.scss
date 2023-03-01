@@ -1,0 +1,100 @@
+.surahs_container {
+  width: 100%;
+//   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  .boxes {
+    .box{
+        width: 80%;
+        margin: 100px  auto;
+        display: flex;
+        flex-direction: column;
+        
+        // justify-content: center;
+        border-radius: 20px;
+        background-color: #f0f0f0;
+    font-family: cursive, "Times New Roman", Times, serif;
+    padding: 30px ;
+    box-shadow: -7px -7px 15px rgba(255, 255, 255, 0.65),
+      7px 7px 15px rgba(70, 70, 70, 0.12),
+      inset -7px -7px 15px rgba(255, 255, 255, 0.65),
+      inset 7px 7px 15px rgba(70, 70, 70, 0.12);
+    transition: all 0.5s;
+
+    &:hover {
+      box-shadow: -22px -22px 35px rgba(255, 255, 255, 0.65),
+        17px 17px 25px rgba(70, 70, 70, 0.12),
+        inset -7px -7px 15px rgba(255, 255, 255, 0.65),
+        inset 7px 7px 15px rgba(70, 70, 70, 0.12);
+    }
+
+    .text {
+      font-size: 1.2rem;
+      margin: 5px 0;
+      // text-align: left;
+      font-family: cursive, Helvetica, sans-serif;
+    }
+    .arabic{
+      font-size: 1.6rem;
+      margin: 10px 0;
+    }
+
+    h2 {
+        margin: 10px auto;
+        padding: 5px;
+      text-align: center;
+      border-radius: 50%;
+      box-shadow: -22px -22px 35px rgba(255, 255, 255, 0.65),
+        17px 17px 25px rgba(70, 70, 70, 0.12),
+      span {
+        color: rgb(53, 53, 35);
+      }
+    }
+
+    .player{
+        text-align:center;
+        margin: 15px 0;
+    }
+
+    .audioplayer{
+      background-color: cadetblue;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      margin: 15px 0;
+      width: 50%;
+      margin: 10px auto;
+    }
+    }
+  }
+}
+
+
+@media (max-width: 500px){
+
+
+  .surahs_container {
+    width: 100%;
+  //   margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    .boxes {
+      .box{
+          width: 90%;
+          margin: 100px  auto;
+          display: flex;
+          flex-direction: column;
+          
+          // justify-content: center;
+          border-radius: 20px;
+      }
+  
+    }
+  }
+  
+ 
+}

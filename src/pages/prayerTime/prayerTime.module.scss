@@ -1,0 +1,188 @@
+.prayerTime{
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    .wrapper{
+        width: 90%;
+        margin: 0 auto;
+        .header{
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 0;
+            color: cadetblue;
+            span{
+                font-size: 1.3rem;
+                color: rgb(22, 68, 223);
+            }
+        }
+        .select{
+            padding: 5px 15px;
+            border: 2px solid rgb(24, 11, 206);
+            border-radius: 5px;
+            outline: rgb(14, 25, 173);
+            font-size: 1.4rem;
+        }
+            .cards{
+                margin: 100px auto;
+                display: grid;
+                grid-template-columns: 31% 31% 31%;
+                justify-content: space-between;
+                align-items: stretch;
+                gap: 40px;
+                .card{
+                    padding: 15px;
+                    border-radius: 10px;
+                    box-shadow: -7px -7px 15px rgba(255, 255, 255, 0.65),
+                    7px 7px 15px  rgba(70, 70, 70, 0.12),
+                    inset  -7px -7px 15px rgba(255, 255, 255, 0.65),
+                    inset
+                    7px 7px 15px  rgba(70, 70, 70, 0.12);
+    
+                    &:hover{
+                        box-shadow: -22px -22px 35px rgba(255, 255, 255, 0.65),
+                        17px 17px 25px  rgba(70, 70, 70, 0.12),
+                        inset  -3px -3px 12px rgba(255, 255, 255, 0.65),
+                        inset
+                        3px 3px 12px  rgba(70, 70, 70, 0.12);
+                    }
+                    img{
+                        width: 80px;
+                        aspect-ratio: 2/2;
+                        object-fit: contain;
+                        mix-blend-mode: color-burn;
+                    }
+                    h1{
+                        opacity: 0.7;
+                        color: darkblue;
+                    }
+                    span{
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        
+    }
+}
+
+
+@media (max-width: 730px){
+    .prayerTime{
+        width: 100%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
+        .wrapper{
+            width: 90%;
+            margin: 0 auto;
+            .header{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin: 50px 0;
+                color: cadetblue;
+                span{
+                    font-size: 1.3rem;
+                    color: rgb(22, 68, 223);
+                }
+            }
+            .select{
+                padding: 5px 15px;
+                border: 2px solid rgb(24, 11, 206);
+                border-radius: 5px;
+                outline: rgb(14, 25, 173);
+                font-size: 1.4rem;
+            }
+                .cards{
+                    margin: 100px auto;
+                    display: grid;
+                    grid-template-columns: 31% 31% 31%;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    gap: 20px;
+                    .card{
+                        padding: 15px;
+                        border-radius: 10px;
+                        box-shadow: -7px -7px 15px rgba(255, 255, 255, 0.65),
+                        7px 7px 15px  rgba(70, 70, 70, 0.12),
+                        inset  -7px -7px 15px rgba(255, 255, 255, 0.65),
+                        inset
+                        7px 7px 15px  rgba(70, 70, 70, 0.12);
+
+                        
+        
+                        &:hover{
+                            box-shadow: -22px -22px 35px rgba(255, 255, 255, 0.65),
+                            17px 17px 25px  rgba(70, 70, 70, 0.12),
+                            inset  -3px -3px 12px rgba(255, 255, 255, 0.65),
+                            inset
+                            3px 3px 12px  rgba(70, 70, 70, 0.12);
+                        }
+                        img{
+                            width: 80px;
+                            aspect-ratio: 2/2;
+                            object-fit: contain;
+                            mix-blend-mode: color-burn;
+                        }
+                        h1{
+                            opacity: 0.7;
+                            color: darkblue;
+                        }
+                        span{
+                            font-size: 1.5rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            
+        }
+    }
+}
+@media (max-width: 520px){
+    .prayerTime{
+        .wrapper{
+            width: 90%;
+            .header{
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                text-align: left;
+                flex-wrap: wrap;
+                margin: 30px 0;
+            }
+                .cards{
+                    margin: 70px auto;
+                    display: grid;
+                    grid-template-columns: 48% 48% ;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    gap: 20px;
+                }
+            
+        }
+    }
+}
+@media (max-width: 420px){
+    .prayerTime{
+        .wrapper{
+            width: 90%;
+            .header{
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                text-align: left;
+                flex-wrap: wrap;
+                margin: 30px 0;
+            }
+                .cards{
+                    margin: 50px auto;
+                    margin-bottom: 150px;
+                    display: grid;
+                    grid-template-columns: 100% ;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    gap: 20px;
+                }
+            
+        }
+    }
+}
