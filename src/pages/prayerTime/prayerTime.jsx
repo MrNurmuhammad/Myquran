@@ -43,8 +43,6 @@ const PrayerTime = () => {
   return (
     <div>
 
-        <Navbar/>
-
         <div className={sass.prayerTime}>
           <h1>Namoz vaqtlari</h1>
           <div className={sass.wrapper}>
