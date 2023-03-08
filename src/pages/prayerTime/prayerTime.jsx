@@ -16,17 +16,15 @@ const PrayerTime = () => {
   const [region, setRegion] = useState("Denov")
   const [isActive, setIsActive] = useState(false)
   
-  console.log(isActive);
   useEffect(() => {
 
     timeData.get(`day?region=${region}`).then((res) =>setTime(res?.data))
 
     
   },[region])
-  console.log(region, "region");
   return (
     <div>
-
+       <Navbar />
         <div className={sass.prayerTime}>
           <h1>Namoz vaqtlari</h1>
           <div className={sass.wrapper}>

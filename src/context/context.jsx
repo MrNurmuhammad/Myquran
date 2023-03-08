@@ -7,12 +7,13 @@ const ContextProvider = ({children}) => {
     const [oyah, setOyah] = useState();
     const [isplaying, setIsplaying] = useState(false);
     const [audioData, setAudioData] = useState([]);
-    const [audioId, setAudioId] = useState(1);
+    const [audioId, setAudioId] = useState(0);
+    const [surah, setSurah] = useState({});
     const [language, setLanguage] = useState("");
     const [currentSong, setCurrentSong] = useState();
 
     return(
-        <audioContext.Provider value={{audioId, setAudioId,
+        <audioContext.Provider value={{surah, setSurah, audioId, setAudioId,
          language, setLanguage, audioData, setAudioData,  isplaying, setIsplaying, currentSong, setCurrentSong}}>
             <>
                 {children}

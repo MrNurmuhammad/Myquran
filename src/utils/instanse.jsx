@@ -7,6 +7,12 @@ export const instanse = axios.create({
 })
 
 
+export const instanseImage = axios.create({
+    baseURL: 'https://cdn.islamic.network/quran/images/',
+    timeout: 10000,
+})
+
+
 export const timeData = axios.create({
     baseURL: 'https://islomapi.uz/api/present/',
     timeout: 10000,

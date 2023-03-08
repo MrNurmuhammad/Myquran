@@ -1,0 +1,11 @@
+.audioPlayer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f2f3;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    gap: 20px;
+    align-items: center;
+}

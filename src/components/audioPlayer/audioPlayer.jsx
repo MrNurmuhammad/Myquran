@@ -1,35 +1,31 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import ReactAudioPlayer from 'react-audio-player'
 import { audioContext } from '../../context/context'
 import Navbar from '../navbar/navbar'
+import sass from './audioPlayer.module.scss'
 
 
 export  const AudioPlayer = () => {
   const {audioId, setAudioId} = useContext(audioContext)
   const { audioData, setAudioData } = useContext(audioContext);
+  const {surah, setSurah} = useContext(audioContext);
+  const audioRef = useRef(null);
 
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-  };
-  
   useEffect(() => {
 
   }, [])
     
   return (
-      <div>
-        
-        <ReactAudioPlayer
-        src={audioData[audioId]?.audio}
-        autoPlay={false}
-        controls
-        onPlay={togglePlay}
-        onPause={togglePlay}
-        onEnded={() => setIsPlaying(false)}
-      />
-      <h2>{isPlaying ? "Playing" : "Paused"}</h2>
+      <div className={sass.audioPlayer}>
+        <h2><span>{surah?.data?.number}</span> - {surah?.data?.englishName}</h2>
+        <audio  style={{width: "80%"} }
+          src={audioData[audioId]?.audio}
+          autoPlay
+          controls
+          onEnded={() => setAudioId(audioId + 1)}
+          
+        >
+        </audio>
     </div>
   )
 }
