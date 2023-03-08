@@ -18,7 +18,7 @@ export  const AudioPlayer = () => {
   return (
       <div className={sass.audioPlayer}>
         <h2><span>{surah?.data?.number}</span> - {surah?.data?.englishName}</h2>
-        <audio  style={{width: "80%"} }
+        <audio  
           src={audioData[audioId]?.audio}
           autoPlay
           controls

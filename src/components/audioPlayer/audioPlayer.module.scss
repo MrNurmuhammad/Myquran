@@ -9,4 +9,18 @@
     gap: 20px;
     align-items: center;
     z-index: 33;
+    audio{
+        width: 80%;
+    }
+}
+
+@media (max-width:450px){
+    .audioPlayer{
+        gap: 10px;
+        font-size: .9rem;
+        flex-direction: column;
+        audio{
+            width: 100%;
+        }
+    }
 }
