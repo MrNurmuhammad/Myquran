@@ -17,6 +17,8 @@ const Home = () => {
           <div onClick={() => nav("/quran")} className="quron">
             <h1 to="/quran">Qur'on</h1>
           </div>
+
+          <h1 className='avtor'>Created by Nurmuhammad</h1>
         </div>
       
     </div>
